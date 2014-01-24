@@ -1,14 +1,17 @@
-'''Functions Exercises
+# Functions Exercises
 
 
-Exercise 3.3
+# Exercise 3.3
+'''
 Python provides a built-in function called 'len' that returns the length of
 a string. Write a function named right_justify that takes a string named s as 
 a parameter and prints the string with enough leading spaces so that the last 
 letter of the string is in column 70 of the display.
+'''
 
 
-Exercise 3.4
+# Exercise 3.4
+'''
 A function object is a value you can assign to a variable or pass as an argument.
 For example, do_twice is a function that takes a function object as an argument
 and calls it twice:
@@ -34,10 +37,11 @@ as an argument.
 5. Define a new function called do_four that takes a function object and a value
 and calls the function four times, passing the value as a parameter. There
 should be only two statements in the body of this function, not four.
+'''
 
 
-Exercise 3.5
-1. Write a function that draws a grid like the following:
+# Exercise 3.5
+'''1. Write a function that draws a grid like the following:
 
 +----+----+
 |    |    |
