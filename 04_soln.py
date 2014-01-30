@@ -18,6 +18,10 @@ print bob
 Write a function called square that takes a parameter named t, which is a turtle.
 It should use the turtle to draw a square.
 '''
+def square(t):
+    for i in range(4):
+        fd(t,100)
+        lt(t)
 
 # 2
 '''
@@ -25,6 +29,10 @@ Add another parameter, named length, to square. Modify the body so length of the
 sides is length, and then modify the function call to provide a second argument.
 Run the program again. Test your program with a range of values for length.
 '''
+def square_2(t,length):
+    for i in range(4):
+        fd(t,length)
+        lt(t)
 
 # 3
 '''
@@ -35,6 +43,11 @@ Make a copy of square and change the name to polygon. Add another parameter
 named n and modify the body so it draws an n-sided regular polygon.
 Hint: The exterior angles of an n-sided regular polygon are 360/n degrees.
 '''
+def polygon(t,length,n):
+    angle = 360/n
+    for i in range(n):
+        fd(t,length)
+        lt(t,angle)
 
 # 4
 '''
@@ -48,6 +61,16 @@ Hint: if bob is too slow for you, you can speed him up by changing bob.delay,
 which is the time between moves, in seconds. bob.delay=0.01 ought to get him
 moving.
 '''
+from math import pi
+def circle(t,r):
+    bob.delay=0.01
+    circumference = 2 * pi * r
+    n = 50
+    length = circumference / n
+    angle = 360 / n
+    for i in range(n):
+        fd(t,length)
+        lt(t,angle)
 
 # 5
 '''
@@ -55,6 +78,14 @@ Make a more general version of circle called arc that takes an additional
 parameter angle, which determines what fraction of a circle to draw. angle is
 in units of degrees, so when angle=360, arc should draw a complete circle.
 '''
+def arc(t,r,angle):
+    bob.delay=0.01
+    circumference = 2 * pi * r * (angle / 360.0)
+    n = 50 
+    length = circumference / n
+    for i in range(n):
+        fd(t,length)
+        lt(t,angle/n)
 
 # tells TurtleWorld to wait for the user to do something
 wait_for_user()
