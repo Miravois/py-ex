@@ -98,4 +98,3 @@ if __name__ == '__main__':
     circle(bob, radius)
 
     wait_for_user()
-
