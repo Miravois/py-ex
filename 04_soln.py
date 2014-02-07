@@ -65,12 +65,10 @@ from math import pi
 def circle(t,r):
     bob.delay=0.01
     circumference = 2 * pi * r
-    n = 50
+    n = int(circumference / 3) +1
     length = circumference / n
     angle = 360 / n
-    for i in range(n):
-        fd(t,length)
-        lt(t,angle)
+    polygon(t,n,length)
 
 # 5
 '''
@@ -80,9 +78,9 @@ in units of degrees, so when angle=360, arc should draw a complete circle.
 '''
 def arc(t,r,angle):
     bob.delay=0.01
-    circumference = 2 * pi * r * (angle / 360.0)
-    n = 50 
-    length = circumference / n
+    arc_length = 2 * pi * r * (angle / 360.0)
+    n = int(arc_length / 3) +1 
+    length = arc_length / n
     for i in range(n):
         fd(t,length)
         lt(t,angle/n)
